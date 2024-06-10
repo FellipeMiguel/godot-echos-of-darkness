@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/env/background.gd" type="Script" id=1]
+[ext_resource path="res://assets/tiles/parallax_background/layer3.png" type="Texture" id=2]
+[ext_resource path="res://assets/tiles/parallax_background/layer1.png" type="Texture" id=3]
+[ext_resource path="res://assets/tiles/parallax_background/layer4.png" type="Texture" id=4]
+[ext_resource path="res://assets/tiles/parallax_background/layer2.png" type="Texture" id=5]
+
+[node name="Background" type="ParallaxBackground"]
+script = ExtResource( 1 )
+layer_speed = [ 20, 15, 10, 5 ]
+
+[node name="Layer4" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 592, 0 )
+
+[node name="Texture" type="TextureRect" parent="Layer4"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 4 )
+
+[node name="Layer1" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.4, 1 )
+motion_mirroring = Vector2( 592, 0 )
+
+[node name="Texture" type="TextureRect" parent="Layer1"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+
+[node name="Layer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.6, 1 )
+motion_mirroring = Vector2( 592, 0 )
+
+[node name="Texture" type="TextureRect" parent="Layer2"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 5 )
+
+[node name="Layer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.8, 1 )
+motion_mirroring = Vector2( 592, 0 )
+
+[node name="Texture" type="TextureRect" parent="Layer3"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
