@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://resources/diamond_decoration.tres" type="TileSet" id=1]
 [ext_resource path="res://resources/floor.tres" type="TileSet" id=2]
 [ext_resource path="res://scenes/env/background.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://resources/torch_decoration.tres" type="TileSet" id=5]
 
 [node name="Level" type="Node2D"]
 
@@ -20,6 +21,12 @@ tile_set = ExtResource( 1 )
 cell_size = Vector2( 8, 8 )
 format = 1
 tile_data = PoolIntArray( 720937, 0, 0, 720974, 1, 0, 983062, 0, 0, 983135, 1, 0, 1769477, 4, 0, 1769487, 3, 0, 1769501, 0, 0, 1769553, 1, 0, 1769565, 1, 0, 1769568, 1, 0, 1769621, 4, 0, 1769627, 4, 0, 1769640, 1, 0, 1769649, 1, 0 )
+
+[node name="TorchDecoration" type="TileMap" parent="LevelDesing"]
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 393229, 0, 0, 393256, 4, 0, 524318, 7, 0, 524331, 2, 0, 655367, 0, 0 )
 
 [node name="Background" parent="." instance=ExtResource( 3 )]
 
