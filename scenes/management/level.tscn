@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://resources/diamond_decoration.tres" type="TileSet" id=1]
 [ext_resource path="res://resources/floor.tres" type="TileSet" id=2]
 [ext_resource path="res://scenes/env/background.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://resources/torch_decoration.tres" type="TileSet" id=5]
+[ext_resource path="res://scenes/env/Mask.tscn" type="PackedScene" id=6]
 
 [node name="Level" type="Node2D"]
 
@@ -33,3 +34,5 @@ tile_data = PoolIntArray( 393229, 0, 0, 393256, 4, 0, 524318, 7, 0, 524331, 2, 0
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 23, 204 )
 player_gravity = 263
+
+[node name="Mask" parent="." instance=ExtResource( 6 )]
